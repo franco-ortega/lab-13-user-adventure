@@ -17,20 +17,25 @@
 <body>BODY
 
     <header>HEADER in BODY
-        <div>
+        <div class="title-div">
             DIV #1 in HEADER
         </div>
-        <div>DIV #2 in HEADER:
+        <div class="user-div">DIV #2 in HEADER:
             <br>
             USER DATA
             <br>
             "UserName" the "Species"
             <br>
-            Health Points
+            Tool: ???
             <br>
-            Days Remaining
+            Health Points: ??
             <br>
-            Gems Collected: 0 blue, 0 green, 0 red
+            Days Remaining: ??
+            <br>
+            Gems Collected: 
+            <span class="blue-gem-span">0 blue</span>, 
+            <span class="green-gem-span">0 green</span>, 
+            <span class="red-gem-span">0 red</span>
         </div>
     </header>
 
@@ -45,11 +50,44 @@
                 P: The description of the game.
                 <br>
                 Collect 5 gems in the fairy lands to save the farm!
+                <br>
+                You may pick one tool to aid you during your journey. The compass will keep you from getting lost. The shield will protect you from monsters. The torch will help you find gems.
+                <br>
+                <form action="">
+                    <label>
+                        Enter Your Name: <input type="text" name="user-name" />
+                    </label>
+                    <br>
+                    <label>
+                        Select your Type:
+                        <select name="species">
+                            <option value="elf">Elf</option>
+                            <option value="Dwarf">Dwarf</option>
+                            <option value="Halfling">Halfling</option>
+                        </select>
+                    </label>
+                    <label>
+                        <br>
+                        Pick your Tool:
+                        <select name="tool">
+                            <option value="Compass">Compass</option>
+                            <option value="Shield">Shield</option>
+                            <option value="Torch">Torch</option>
+                        </select>
+                    </label>
+                    <br>
+                    <button>Begin Adventure</button>
+                    
+
+                </form>
+                <div class="form-div">
+
+                </div>
             </p>
 
         </section>
     </main>
-    
+
     <footer>
         FOOTER
     </footer>

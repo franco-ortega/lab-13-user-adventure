@@ -137,4 +137,4 @@
     1. Compass prevents Days being increased from being lost
     1. Shield reduces damage by 1 (decrements damage)
     1. Torch increases gems found by 1 (increments damage)
-    
+    1. Health Points flash when close to 0
