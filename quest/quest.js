@@ -13,14 +13,14 @@ console.log(quest);
 
 
 const h2 = document.createElement('h2')
+const pTag = document.createElement('p')
 
 h2.textContent = quest.title;
+pTag.textContent = quest.description;
 
-section.appendChild(h2);
-
+section.append(h2, pTag);
 
 console.log(quest.choices);
-
 
 const form = document.createElement('form');
 
@@ -28,6 +28,8 @@ section.appendChild(form);
 
 
 quest.choices.forEach(choice => {
+    const ul =document.createElement('ul');
+    const li = document.createElement('li');
     const label = document.createElement('label');
     const span = document.createElement('span');
 
@@ -40,8 +42,11 @@ quest.choices.forEach(choice => {
 
     label.append(radio, span);
 
-    form.appendChild(label);
+    li.append(label);
 
+    ul.append(li);
+
+    form.appendChild(ul);
 });
 
 
@@ -72,31 +77,6 @@ console.log(user);
     setUser(user);
 
     window.location.href = '../map';
-
-
 });
 
 form.appendChild(button);
-
-
-/*
-            <br>
-            Description of Quest
-            <br>
-            User Choices
-            <br>
-            Submit Button
-*/
-
-//create div in section for description
-//create li with choices (radio buttons) to put in ul
-//append div in section
-//append li in ul
-//append ul in section
-
-
-
-//ul.textContent = 'Ul test content'
-//const li = document.createElement('li');
-//li.textContent = 'Li test content'
-//ul.append(li);

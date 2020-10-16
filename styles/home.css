@@ -10,6 +10,10 @@ body {
     border: 5px solid black;
 }
 
+ol, ul {
+	list-style: none;
+}
+
 header {
     background-color: lemonchiffon;
     margin: 5px;
