@@ -1,6 +1,9 @@
 import { quests } from '../quest/data.js';
 import { findById, getUser, setUser } from '../utils.js';
 
+//const body = document.querySelector('body');
+//const main = document.querySelector('main');
+
 const section = document.querySelector('section');
 
 const searchParams = new URLSearchParams(window.location.search);
@@ -11,9 +14,12 @@ const id = searchParams.get('id')
 const quest = findById(quests, id)
 console.log(quest);
 
+section.style.backgroundImage = `url('../assets/${quest.image}')`;
+console.log(quest.image);
 
 const h2 = document.createElement('h2')
 const pTag = document.createElement('p')
+
 
 h2.textContent = quest.title;
 pTag.textContent = quest.description;
