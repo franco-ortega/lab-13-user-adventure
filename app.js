@@ -24,7 +24,7 @@ console.log(data.get('user-name'), data.get('species'), data.get('tool'));
 
 //console.log(quests);
 
-    window.location.href = '../map';
+    window.location.href = './map';
 
 })
 
