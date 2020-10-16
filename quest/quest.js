@@ -38,7 +38,7 @@ quest.choices.forEach(choice => {
     radio.value = choice.id;
     radio.name = 'choices';
 
-    label.append(span, radio);
+    label.append(radio, span);
 
     form.appendChild(label);
 
@@ -57,6 +57,7 @@ console.log('form submitted');
 
     const checked = document.querySelector(':checked')
     const selection = checked.value;
+console.log(selection);
 
     const choice = findById(quest.choices, selection);
 
@@ -64,10 +65,14 @@ console.log('form submitted');
     
     user.hp += choice.hp;
     user.gold += choice.gold;
+    user.completed[quest.id] = true;
 
-    console.log(user);
+console.log(user);
 
     setUser(user);
+
+    window.location.href = '../map';
+
 
 });
 
