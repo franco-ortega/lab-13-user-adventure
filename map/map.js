@@ -1,11 +1,30 @@
 import { quests } from '../quest/data.js';
-import { getUser } from '../utils.js';
+import { getUser, USER } from '../utils.js';
 
 console.log(quests);
 
 console.log('is this working?')
 
-getUser();
+const user = getUser();
+
+//if the user has died or run out of days or completed all quests, the games moves to the results page
+
+function hasCompletedAllQuests(_user) {
+    for (let i = 0; i < quests.length; i++) {
+        const quest = quests[i];
+
+        if (!user.completed[quest.id]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+//user.days <= 0 || 
+
+if ( user.hp <= 0 || hasCompletedAllQuests(user)) {
+    window.location.href = '../results';
+}
 
 const section = document.querySelector('section');
 const ul = document.querySelector('ul');
