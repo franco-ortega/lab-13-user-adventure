@@ -8,7 +8,6 @@ console.log('is this working?')
 const user = getUser();
 
 //if the user has died or run out of days or completed all quests, the games moves to the results page
-
 function hasCompletedAllQuests(_user) {
     for (let i = 0; i < quests.length; i++) {
         const quest = quests[i];
@@ -20,11 +19,25 @@ function hasCompletedAllQuests(_user) {
     return true;
 }
 
-//user.days <= 0 || 
-
-if ( user.hp <= 0 || hasCompletedAllQuests(user)) {
+if ( user.hp <= 0 || user.days <= 0 || hasCompletedAllQuests(user)) {
     window.location.href = '../results';
 }
+
+
+const hpSpan = document.getElementById('hp-span');
+const blueGem = document.getElementById('blue-gem-span');
+const redGem = document.getElementById('red-gem-span');
+const yellowGem = document.getElementById('yellow-gem-span');
+
+hpSpan.textContent = user.hp;
+blueGem.textContent = `${user.blue} blue, `;
+redGem.textContent = `${user.red} red, `;
+yellowGem.textContent = `${user.yellow} yellow`;
+
+console.log(hpSpan)
+console.log(blueGem);
+console.log(redGem);
+console.log(yellowGem);
 
 const section = document.querySelector('section');
 const ul = document.querySelector('ul');

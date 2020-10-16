@@ -14,11 +14,11 @@ console.log(data.get('user-name'), data.get('species'), data.get('tool'));
         name: data.get('user-name'), 
         species: data.get('species'),
         tool: data.get('tool'),
-        hp: 10,
+        hp: 20,
         days: 5,
         blue: 0,
-        green: 0,
         red: 0,
+        yellow: 0,
         completed: {}
     });
 

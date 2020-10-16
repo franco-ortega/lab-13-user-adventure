@@ -8,137 +8,136 @@ export const quests = [
         },
         image: 'forest.jpg',
         description: `
-            You enter a deep forest with glowing lights that dance as you wander by.
+            You enter a deep forest with glowing lights that dance as you search for blue gems.
         `,
         choices: [{
-            id: 'negotiate',
-            description: 'Negotiate with them',
+            id: 'climb',
+            description: 'Climb up the trees to search for gems in the branches.',
             result: `
-                Knowing the monsters are not too bright, you offer to go buy them all
-                turkey dinners from the village pub. They give you 35 gold for meals
-                that will never be delivered. I hope you can live with yourself. 
+                Your tree search found 2 blue gems, but you fell down and got some nasty bruises, but you got a good lay of the land while you were up there, so you didn't get lost.
+            `,
+            hp: -5,
+            days: -1,
+            blue: 2,
+            red: 0,
+            yellow: 0
+        }, {
+            id: 'undergrowth',
+            description: 'Search for gems through the undergrowth.',
+            result: `
+                You search through the underbrush and find 1 blue gem! However, you got lost while keeping your head down.
             `,
             hp: 0,
-            gold: 35
+            days: -2,
+            blue: 1,
+            red: 0,
+            yellow: 0
         }, {
-            id: 'fight',
-            description: 'Fiiiiiggghhhttt!',
+            id: 'dig',
+            description: 'You dig into the dirt for gems',
             result: `
-                Brandishing your sword you let out a warrior's cry and charge into the monsters
-                hacking and slashing. Before long you stand panting gazing across the bodies of
-                your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-                find 50 gold.
+                You don't find any gems, but you disturb a nest of underground sprites who bite and scratch at you as you flee.
             `,
-            hp: -30,
-            gold: 50
-        }, {
-            id: 'run',
-            description: 'Run away like good Sir Robin',
-            result: `
-                As you make a dash for the door a giant spider descends and take a bite of flesh,
-                causing 50 hp damage.
-            `,
-            hp: -50,
-            gold: 0
+            hp: -10,
+            days: -1,
+            blue: 0,
+            red: 0,
+            yellow: 0
         }]
 },
 
 {
-        id: 'monsters',
-        title: 'A Den of Monsters',
-        map: {
-            top: '89%',
-            left: '44%'
-        },
-        image: 'monsters.jpg',
-        description: `
-            MONSTERS!!!!!
-        `,
-        choices: [{
-            id: 'negotiate',
-            description: 'Negotiate with them',
-            result: `
-                Knowing the monsters are not too bright, you offer to go buy them all
-                turkey dinners from the village pub. They give you 35 gold for meals
-                that will never be delivered. I hope you can live with yourself. 
-            `,
-            hp: 0,
-            gold: 35
-        }, {
-            id: 'fight',
-            description: 'Fiiiiiggghhhttt!',
-            result: `
-                Brandishing your sword you let out a warrior's cry and charge into the monsters
-                hacking and slashing. Before long you stand panting gazing across the bodies of
-                your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-                find 50 gold.
-            `,
-            hp: -30,
-            gold: 50
-        }, {
-            id: 'run',
-            description: 'Run away like good Sir Robin',
-            result: `
-                As you make a dash for the door a giant spider descends and take a bite of flesh,
-                causing 50 hp damage.
-            `,
-            hp: -50,
-            gold: 0
-        }]
-},
-
-{
-    id: 'dragon',
-    title: 'A Problem Dragon',
+    id: 'volcano',
+    title: 'Fire Mountain',
     map: {
-        top: '57%',
-        left: '67%'
+        top: '39%',
+        left: '74%'
     },
     image: 'volcano.jpg',
-    audio: 'dragon.wav',
-    action: 'dragon-growl.aiff',
     description: `
-        You travel to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        You venture to the volcano in search of red gems.
     `,
     choices: [{
-        id: 'run',
-        description: 'Get the hell out of the village',
+        id: 'lava',
+        description: 'Reach into the lava.',
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            Oooooouuuuccch!!! You burn yourself badly but find 2 gems!
         `,
-        hp: -35,
-        gold: 35
+        hp: -10,
+        days: 1,
+        blue: 0,
+        red: 2,
+        yellow: 0
     }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        id: 'tunnels',
+        description: 'You search through the scorching hot tunnels.',
         result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
+            You get lost and burned but find 1 gem.
         `,
-        hp: -45,
-        gold: 0
+        hp: -5,
+        days: -2,
+        blue: 0,
+        red: 1,
+        yellow: 0
     }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
+        id: 'top',
+        description: 'You climb to the top of the volcano to see if any gems have been spurt out the opening.',
         result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
+            No luck! Dang!!
         `,
         hp: 0,
-        gold: 90
+        days: -1,
+        blue: 0,
+        red: 0,
+        yellow: 0
     }]
-}
+},
+
+{
+    id: 'swamp',
+    title: 'Bogmire',
+    map: {
+        top: '89%',
+        left: '44%'
+    },
+    image: 'swamp.jpg',
+    description: `
+        You enter a deep forest with glowing lights that dance as you wander by.
+    `,
+    choices: [{
+        id: 'negotiate',
+        description: 'Choice #1',
+        result: `
+            Results #1. 
+        `,
+        hp: 0,
+        days: 0,
+        blue: 0,
+        red: 0,
+        yellow: 0
+    }, {
+        id: 'fight',
+        description: 'Choice #2',
+        result: `
+            Results #2.
+        `,
+        hp: 0,
+        days: 0,
+        blue: 0,
+        red: 0,
+        yellow: 0
+    }, {
+        id: 'run',
+        description: 'Choice #3',
+        result: `
+            Results #3
+        `,
+        hp: 0,
+        days: 0,
+        blue: 0,
+        red: 0,
+        yellow: 0
+    }]
+},
+
 ]

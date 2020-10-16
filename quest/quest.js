@@ -75,7 +75,10 @@ console.log(selection);
     const user = getUser();
     
     user.hp += choice.hp;
-    user.gold += choice.gold;
+    user.days += choice.days;
+    user.blue += choice.blue;
+    user.red += choice.red;
+    user.yellow += choice.yellow;
     user.completed[quest.id] = true;
 
 console.log(user);

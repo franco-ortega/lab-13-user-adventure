@@ -66,14 +66,14 @@ p {
     border: 5px solid black;
 }
 
-.blue-gem-span {
+#blue-gem-span {
     color: blue;
 }
 
-.yellow-gem-span {
+#yellow-gem-span {
     color: yellow;
 }
 
-.red-gem-span {
+#red-gem-span {
     color: red;
 }
