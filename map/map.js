@@ -27,6 +27,4 @@ quests.forEach((quest) => {
 
 })
 
-
-
 section.appendChild(ul);
