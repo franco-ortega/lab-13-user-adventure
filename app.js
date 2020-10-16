@@ -1,3 +1,36 @@
+import { USER, setUser } from './utils.js';
+import { quests } from './quest/quest.js';
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+console.log(data.get('user-name'), data.get('species'), data.get('tool'));
+
+    setUser({
+        name: data.get('user-name'), 
+        species: data.get('species'),
+        tool: data.get('tool'),
+        hp: 10,
+        days: 5,
+        blue: 0,
+        green: 0,
+        red: 0,
+        completed: {}
+    });
+
+console.log(quests);
+
+})
+
+
+
+
+
+
 // import functions and grab DOM elements
 
 // initialize state
@@ -25,29 +58,3 @@ button.textContent = 'Begin Adventure';
 
 formDiv.append(form, enterName, toolChoice, button);
 */
-
-const form = document.querySelector('form');
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const data = new FormData(form);
-
-console.log(data.get('user-name'), data.get('species'), data.get('tool'));
-
-    const user = {
-        name: data.get('user-name'), 
-        species: data.get('species'),
-        tool: data.get('tool'),
-        hp: 10,
-        days: 5,
-        gemblue: 0,
-        gemgreen: 0,
-        gemred: 0 
-    }
-
-console.log(user);
-
-
-
-})
