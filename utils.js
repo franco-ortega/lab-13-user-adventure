@@ -9,5 +9,15 @@ console.log(stringyUser);
 export function getUser() {
     const stringyUser = localStorage.getItem(USER);
 console.log(stringyUser);    
-    return JSON.pasre(stringyUser);
+    return JSON.parse(stringyUser);
+}
+
+export function findById(someArray, someId) {
+    for (let i = 0; i < someArray.length; i++) {
+        const item = someArray[i];
+
+        if (item.id === someId) {
+            return item;
+        }
+    }
 }

@@ -1,5 +1,5 @@
-import { USER, setUser } from './utils.js';
-import { quests } from './quest/quest.js';
+import { setUser } from './utils.js';
+import { quests } from '../quest/data.js';
 
 const form = document.querySelector('form');
 
@@ -23,6 +23,8 @@ console.log(data.get('user-name'), data.get('species'), data.get('tool'));
     });
 
 console.log(quests);
+
+    window.location.href = '../map';
 
 })
 

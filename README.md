@@ -77,7 +77,7 @@
     1. Species input
     1. Tool input
     1. Button ('submit')
-    1. use e.Default thing
+    1. use e.preventDefault thing
 1. Render form
     1. Console.log form
 1. Connect button to form
@@ -96,10 +96,10 @@
     1. Forest link
     1. Volcano link
     1. Lake/Desert link
-1. Connect links to searchParam
 
 ### 4. Quest page (part 1)
 1. User data (State) in Header
+1. Connect Quest links via searchParam
 1. Background image: (based on quest)
 1. Div:
     1. Quest info
