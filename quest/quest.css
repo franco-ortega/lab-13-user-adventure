@@ -12,6 +12,10 @@ section {
 }
 
 
+section {
+    position: relative;
+    z-index: 1;
+}
 
 ul {
     width: 200;
@@ -20,4 +24,20 @@ ul {
 button {
     width: 200px;
     font-weight: bold;
+}
+
+.transparent {
+    background-color: rgb(39, 177, 39, 0.25);
+    position: relative;
+    z-index: 2;
+}
+
+#choices-div {
+    border: grey solid;
+}
+
+#results-div {
+    height: 200px;
+    width: 400px;
+    border: none;
 }
