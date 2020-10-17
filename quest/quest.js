@@ -1,8 +1,7 @@
 import { quests } from '../quest/data.js';
-import { findById, getUser, setUser } from '../utils.js';
+import { findById, getUser, setUser, renderUserData } from '../utils.js';
 
-//const body = document.querySelector('body');
-//const main = document.querySelector('main');
+renderUserData();
 
 const section = document.querySelector('section');
 

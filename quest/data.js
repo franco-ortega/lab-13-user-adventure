@@ -64,7 +64,7 @@ export const quests = [
             Oooooouuuuccch!!! You burn yourself badly but find 2 gems!
         `,
         hp: -10,
-        days: 1,
+        days: -1,
         blue: 0,
         red: 2,
         yellow: 0
@@ -111,7 +111,7 @@ export const quests = [
             Results #1. 
         `,
         hp: 0,
-        days: 0,
+        days: -1,
         blue: 0,
         red: 0,
         yellow: 0
@@ -122,7 +122,7 @@ export const quests = [
             Results #2.
         `,
         hp: 0,
-        days: 0,
+        days: -1,
         blue: 0,
         red: 0,
         yellow: 0
@@ -133,7 +133,7 @@ export const quests = [
             Results #3
         `,
         hp: 0,
-        days: 0,
+        days: -1,
         blue: 0,
         red: 0,
         yellow: 0
