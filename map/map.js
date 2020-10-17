@@ -23,21 +23,38 @@ if ( user.hp <= 0 || user.days <= 0 || hasCompletedAllQuests(user)) {
     window.location.href = '../results';
 }
 
+/*
+    setUser({
+        name: data.get('user-name'), 
+        species: data.get('species'),
+        tool: data.get('tool'),
+        hp: 20,
+        days: 5,
+        blue: 0,
+        red: 0,
+        yellow: 0,
+        completed: {}
+    });
 
+*/
+
+const userSpan = document.getElementById('user-span');
+const toolSpan = document.getElementById('tool-span');
 const hpSpan = document.getElementById('hp-span');
-const blueGem = document.getElementById('blue-gem-span');
-const redGem = document.getElementById('red-gem-span');
-const yellowGem = document.getElementById('yellow-gem-span');
+const daysSpan = document.getElementById('days-span');
+const blueSpan = document.getElementById('blue-gem-span');
+const redSpan = document.getElementById('red-gem-span');
+const yellowSpan = document.getElementById('yellow-gem-span');
 
+
+userSpan.textContent = `${user.name} the ${user.species}`;
+toolSpan.textContent = user.tool;
 hpSpan.textContent = user.hp;
-blueGem.textContent = `${user.blue} blue, `;
-redGem.textContent = `${user.red} red, `;
-yellowGem.textContent = `${user.yellow} yellow`;
+daysSpan.textContent = user.days;
+blueSpan.textContent = `${user.blue} blue, `;
+redSpan.textContent = `${user.red} red, `;
+yellowSpan.textContent = `${user.yellow} yellow`;
 
-console.log(hpSpan)
-console.log(blueGem);
-console.log(redGem);
-console.log(yellowGem);
 
 const section = document.querySelector('section');
 const ul = document.querySelector('ul');
