@@ -1,13 +1,13 @@
 section {
     background-repeat: no-repeat;
     background-size: 100%;
-    color:brown;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;    
     position: relative;
-    z-index: 1;    
+    z-index: 1;
+    color: purple;
+    font-weight: bold;
 }
 
 
@@ -17,6 +17,7 @@ h2 {
 
 ul {
     width: 200;
+    font-weight: bold;
 }
 
 button {
@@ -24,16 +25,12 @@ button {
     font-weight: bold;
 }
 
-/*
-.transparent {
-    background-color: rgba(248, 250, 248, 0.5);
-    position: relative;
-    z-index: 2;
-}
-*/
-
 div {
     background-color: rgba(248, 250, 248, 0.5);
+}
+
+button {
+    margin: 5px;
 }
 
 #choices-div {
@@ -42,7 +39,12 @@ div {
 
 #results-div {
     background-color: rgba(248, 250, 248, 0.0);
-    height: 200px;
-    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 175px;
+    width: 220px;
+    margin: 10px;
+    padding: 5px;
     border: none;
 }

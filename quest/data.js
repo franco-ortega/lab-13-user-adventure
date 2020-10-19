@@ -2,19 +2,15 @@ export const quests = [
     {
         id: 'forest',
         title: 'The Deep Forest',
-        map: {
-            top: '89%',
-            left: '44%'
-        },
         image: 'forest.jpg',
         description: `
-            You enter a deep forest with glowing lights that dance as you search for blue gems.
+            You enter a deep forest with glowing lights that dance in the air as you search for blue gems.
         `,
         choices: [{
             id: 'climb',
             description: 'Climb up the trees to search for gems in the branches.',
             result: `
-                Your tree search found 2 blue gems, but you fell down and got some nasty bruises, but you got a good lay of the land while you were up there, so you didn't get lost. -5 damage. -1 day. 2 blue gems.
+                Success! You found 2 blue gems in the trees!! However, you also came across a hive of pixie wasps that stung you several times. Also, you got a good lay of the land while you were up there, so you didn't get lost.
             `,
             hp: -5,
             days: -1,
@@ -23,9 +19,9 @@ export const quests = [
             yellow: 0
         }, {
             id: 'undergrowth',
-            description: 'Search for gems through the undergrowth.',
+            description: 'Search for gems in the undergrowth.',
             result: `
-                You search through the underbrush and find 1 blue gem! However, you got lost while keeping your head down. 0 damage. -2 days. 1 blue gem.
+                Success! You found 1 blue gem! However, you got lost due to keeping your head down so much.
             `,
             hp: 0,
             days: -2,
@@ -36,7 +32,7 @@ export const quests = [
             id: 'dig',
             description: 'You dig into the dirt for gems',
             result: `
-                You don't find any gems, but you disturb a nest of underground sprites who bite and scratch at you as you flee. -10 damage. -1 day. 0 blue gems.
+                You don't find any gems, but you disturb a nest of underground sprites who tear at your terribly with their fangs and claws as you flee.
             `,
             hp: -10,
             days: -1,
@@ -44,100 +40,92 @@ export const quests = [
             red: 0,
             yellow: 0
         }]
-},
-
-{
-    id: 'volcano',
-    title: 'Fire Mountain',
-    map: {
-        top: '39%',
-        left: '74%'
     },
-    image: 'volcano.jpg',
-    description: `
-        You venture to the volcano in search of red gems.
-    `,
-    choices: [{
-        id: 'lava',
-        description: 'Reach into the lava.',
-        result: `
-            Oooooouuuuccch!!! You burn yourself badly but find 2 gems! -10 damage. -1 day. 2 red gems.
-        `,
-        hp: -10,
-        days: -1,
-        blue: 0,
-        red: 2,
-        yellow: 0
-    }, {
-        id: 'tunnels',
-        description: 'You search through the scorching hot tunnels.',
-        result: `
-            You get lost and burned but find 1 gem. -5 damage. -2 days. 1 red gem.
-        `,
-        hp: -5,
-        days: -2,
-        blue: 0,
-        red: 1,
-        yellow: 0
-    }, {
-        id: 'top',
-        description: 'You climb to the top of the volcano to see if any gems have been spurt out the opening.',
-        result: `
-            No luck! Dang!! No pain, though. 0 damage. -1 day. 0 red gems.
-        `,
-        hp: 0,
-        days: -1,
-        blue: 0,
-        red: 0,
-        yellow: 0
-    }]
-},
 
-{
-    id: 'swamp',
-    title: 'Bogmire Swamp',
-    map: {
-        top: '89%',
-        left: '44%'
+    {
+        id: 'volcano',
+        title: 'Fire Mountain',
+        image: 'volcano.jpg',
+        description: `
+            You venture to the volcano in search of red gems. There is a large tunnel that seems to lead into the heart of the volcano as well as many smaller tunnels along the periphery.
+        `,
+        choices: [{
+            id: 'lava',
+            description: 'Go into the heart of the volcano.',
+            result: `
+                You encounter an angry fire elemental at the heart of the volcano. It burns you badly, but you manage to pick up 2 red gems as you flee!
+            `,
+            hp: -10,
+            days: -1,
+            blue: 0,
+            red: 2,
+            yellow: 0
+        }, {
+            id: 'tunnels',
+            description: 'You search through the tunnels near the exterior of the volcano.',
+            result: `
+                You get lost in the tunnels and are attacked by a flame worm but your effort does earn you 1 red gem.
+            `,
+            hp: -5,
+            days: -2,
+            blue: 0,
+            red: 1,
+            yellow: 0
+        }, {
+            id: 'top',
+            description: 'You climb to the top of the volcano to see if any gems have been spurt out the opening.',
+            result: `
+                No luck! Dang!! Although, you do manage to avoid the lava raining down around you. Phew!!
+            `,
+            hp: 0,
+            days: -1,
+            blue: 0,
+            red: 0,
+            yellow: 0
+        }]
     },
-    image: 'swamp.jpg',
-    description: `
-        You enter a deep forest with glowing lights that dance as you wander by.
-    `,
-    choices: [{
-        id: 'negotiate',
-        description: 'Swamp Choice #1',
-        result: `
-            Swamp Results #1: You got lost. 0 damage. -2 days. 0 yellow gems.
+
+    {
+        id: 'swamp',
+        title: 'Bogmire Swamp',
+        image: 'swamp.jpg',
+        description: `
+            You wade into an eerie swamp filled with misty, foul air in search of yellow gems.
         `,
-        hp: 0,
-        days: -2,
-        blue: 0,
-        red: 0,
-        yellow: 0
-    }, {
-        id: 'fight',
-        description: 'Swamp Choice #2',
-        result: `
-            Swamp Results #2: You found one gem and got hurt badly. -10 damage. -1 day. 1 yellow gem.
-        `,
-        hp: -10,
-        days: -1,
-        blue: 0,
-        red: 0,
-        yellow: 1
-    }, {
-        id: 'run',
-        description: 'Swamp Choice #3',
-        result: `
-            Swamp Results #3: You found 2 gems and only got hurt a little. -5 damage. -1 day. 2 yellow gems.
-        `,
-        hp: -5,
-        days: -1,
-        blue: 0,
-        red: 0,
-        yellow: 2
-    }]
-},
+        choices: [{
+            id: 'wander',
+            description: 'You charge deep into the swamp.',
+            result: `
+                You get lost and find no gems, but at least no foul beasts find you either.
+            `,
+            hp: 0,
+            days: -2,
+            blue: 0,
+            red: 0,
+            yellow: 0
+        }, {
+            id: 'ouch',
+            description: 'You sink into the muck and feel around for gems at the bottom of bogs.',
+            result: `
+                You find a gem! You also find water sprites with sharp teeth. Ouch!!
+            `,
+            hp: -10,
+            days: -1,
+            blue: 0,
+            red: 0,
+            yellow: 1
+        }, {
+            id: 'run',
+            description: 'You stick to dry land and search patches of mushrooms and other fungus.',
+            result: `
+                Success!! You find 2 yellow gems! You also inhale some spores that make you queasy.
+            `,
+            hp: -5,
+            days: -1,
+            blue: 0,
+            red: 0,
+            yellow: 2
+        }]
+    },
 
 ]
