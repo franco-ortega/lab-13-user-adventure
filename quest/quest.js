@@ -64,8 +64,6 @@ const button = document.createElement('button');
 button.textContent = 'Make Your Choice';
 
 
-
-
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -78,15 +76,36 @@ console.log(selection);
     const choice = findById(quest.choices, selection);
 
     const user = getUser();
-    
+
+    if (user.tool === 'Compass') {
+console.log('User has the compass');
+        if (choice.days < -1) {
+            choice.days = choice.days + 1;
+            console.log('The compass worked!!')
+        }
+    } else if (user.tool === 'Shield') {
+console.log('User has the shield');
+        if (choice.hp < 0) {
+            choice.hp = choice.hp + 5;
+            console.log('The shield worked!!')
+        }
+    } else {
+console.log('User has the torch');
+        if (choice.blue >= 1) {
+            choice.blue = choice.blue + 1;
+        } else if (choice.red >= 1) {
+            choice.red = choice.red + 1;
+        } else if (choice.yellow >= 1) {
+            choice.yellow = choice.yellow + 1;
+        }
+    }
+
     user.hp += choice.hp;
     user.days += choice.days;
     user.blue += choice.blue;
     user.red += choice.red;
     user.yellow += choice.yellow;
     user.completed[quest.id] = true;
-
-console.log(user);
 
     setUser(user);
 
@@ -101,13 +120,10 @@ console.log(user);
     returnButton.textContent = 'Return to Map'
 
     returnButton.addEventListener('click', () => {
-        console.log('return button was clicked!')
         window.location.href = '../map';
     })
 
     resultsDiv.append(returnButton);
-
-console.log(resultsDiv);
 
 });
 

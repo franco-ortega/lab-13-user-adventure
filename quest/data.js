@@ -14,7 +14,7 @@ export const quests = [
             id: 'climb',
             description: 'Climb up the trees to search for gems in the branches.',
             result: `
-                Your tree search found 2 blue gems, but you fell down and got some nasty bruises, but you got a good lay of the land while you were up there, so you didn't get lost.
+                Your tree search found 2 blue gems, but you fell down and got some nasty bruises, but you got a good lay of the land while you were up there, so you didn't get lost. -5 damage. -1 day. 2 blue gems.
             `,
             hp: -5,
             days: -1,
@@ -25,7 +25,7 @@ export const quests = [
             id: 'undergrowth',
             description: 'Search for gems through the undergrowth.',
             result: `
-                You search through the underbrush and find 1 blue gem! However, you got lost while keeping your head down.
+                You search through the underbrush and find 1 blue gem! However, you got lost while keeping your head down. 0 damage. -2 days. 1 blue gem.
             `,
             hp: 0,
             days: -2,
@@ -36,7 +36,7 @@ export const quests = [
             id: 'dig',
             description: 'You dig into the dirt for gems',
             result: `
-                You don't find any gems, but you disturb a nest of underground sprites who bite and scratch at you as you flee.
+                You don't find any gems, but you disturb a nest of underground sprites who bite and scratch at you as you flee. -10 damage. -1 day. 0 blue gems.
             `,
             hp: -10,
             days: -1,
@@ -61,7 +61,7 @@ export const quests = [
         id: 'lava',
         description: 'Reach into the lava.',
         result: `
-            Oooooouuuuccch!!! You burn yourself badly but find 2 gems!
+            Oooooouuuuccch!!! You burn yourself badly but find 2 gems! -10 damage. -1 day. 2 red gems.
         `,
         hp: -10,
         days: -1,
@@ -72,7 +72,7 @@ export const quests = [
         id: 'tunnels',
         description: 'You search through the scorching hot tunnels.',
         result: `
-            You get lost and burned but find 1 gem.
+            You get lost and burned but find 1 gem. -5 damage. -2 days. 1 red gem.
         `,
         hp: -5,
         days: -2,
@@ -83,7 +83,7 @@ export const quests = [
         id: 'top',
         description: 'You climb to the top of the volcano to see if any gems have been spurt out the opening.',
         result: `
-            No luck! Dang!! No pain, though.
+            No luck! Dang!! No pain, though. 0 damage. -1 day. 0 red gems.
         `,
         hp: 0,
         days: -1,
@@ -108,7 +108,7 @@ export const quests = [
         id: 'negotiate',
         description: 'Swamp Choice #1',
         result: `
-            Swamp Results #1: You got lost. 
+            Swamp Results #1: You got lost. 0 damage. -2 days. 0 yellow gems.
         `,
         hp: 0,
         days: -2,
@@ -119,7 +119,7 @@ export const quests = [
         id: 'fight',
         description: 'Swamp Choice #2',
         result: `
-            Swamp Results #2: You found one gem and got hurt badly.
+            Swamp Results #2: You found one gem and got hurt badly. -10 damage. -1 day. 1 yellow gem.
         `,
         hp: -10,
         days: -1,
@@ -130,7 +130,7 @@ export const quests = [
         id: 'run',
         description: 'Swamp Choice #3',
         result: `
-            Swamp Results #3: You found 2 gems and only got hurt a little.
+            Swamp Results #3: You found 2 gems and only got hurt a little. -5 damage. -1 day. 2 yellow gems.
         `,
         hp: -5,
         days: -1,
