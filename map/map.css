@@ -1,5 +1,9 @@
+body {
+    background-image: url("/assets/wilderness.jpg");
+}
+
 section {
-    height: 600px;
+    height: 550px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -13,12 +17,29 @@ section {
 }
 
 ul {
-    background-color: rgb(192, 192, 192, 0.5);
+    background-color: rgb(192, 192, 192, 0.75);
     width: 250px;
-
 }
 
 li {
     width: max-content;
     margin: 25px;
+}
+
+#forest {
+    color: darkgreen;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#volcano {
+    color: darkred;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#swamp {
+    color: brown;
+    font-style: italic;
+    font-weight: bold;
 }

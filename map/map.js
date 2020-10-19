@@ -29,11 +29,18 @@ quests.forEach((quest) => {
 
     const li = document.createElement('li');
     const link = document.createElement('a');
+    const addId = quest.id;
 
+    link.id = `${addId}`;
+    
     li.appendChild(link);
+ 
+if (user.completed[quest.id]) {
+    link.textContent = quest.title;
+} else {
     link.textContent = quest.title;
     link.href = `../quest/?id=${quest.id}`;
-    
+}
 
     ul.append(li);
 

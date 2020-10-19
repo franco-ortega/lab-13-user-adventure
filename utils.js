@@ -39,4 +39,4 @@ export function renderUserData() {
     redSpan.textContent = `${user.red} red, `;
     yellowSpan.textContent = `${user.yellow} yellow`;
     
-    };    
+    };

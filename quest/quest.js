@@ -3,25 +3,22 @@ import { findById, getUser, setUser, renderUserData } from '../utils.js';
 
 renderUserData();
 
+const body = document.querySelector('body');
 const section = document.querySelector('section');
 const choicesDiv = document.querySelector('#choices-div')
-console.log(choicesDiv);
 const resultsDiv = document.querySelector('#results-div');
 
 const searchParams = new URLSearchParams(window.location.search);
-console.log(searchParams.get('id'));
 
 const id = searchParams.get('id')
 
 const quest = findById(quests, id)
-console.log(quest);
 
-section.style.backgroundImage = `url('../assets/${quest.image}')`;
-console.log(quest.image);
+body.style.backgroundImage = `url('../assets/${quest.image}')`;
+//section.style.backgroundImage = `url('../assets/${quest.image}')`;
 
 const h2 = document.createElement('h2')
 const pTag = document.createElement('p')
-
 
 h2.textContent = quest.title;
 pTag.textContent = quest.description;
@@ -29,12 +26,9 @@ pTag.classList.add("transparent");
 
 choicesDiv.append(h2, pTag);
 
-console.log(quest.choices);
-
 const form = document.createElement('form');
 
 choicesDiv.appendChild(form);
-
 
 quest.choices.forEach(choice => {
     const ul =document.createElement('ul');
@@ -58,16 +52,11 @@ quest.choices.forEach(choice => {
     form.appendChild(ul);
 });
 
-
 const button = document.createElement('button');
-
 button.textContent = 'Make Your Choice';
-
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-
-console.log('form submitted');
 
     const checked = document.querySelector(':checked')
     const selection = checked.value;
@@ -108,9 +97,6 @@ console.log('User has the torch');
     user.completed[quest.id] = true;
 
     setUser(user);
-
-//Has to show RESULT of CHOICE on the quest page
-//choice.result
 
     resultsDiv.textContent = choice.result;
     resultsDiv.style.backgroundColor = "rgba(248, 250, 248, 0.5)";

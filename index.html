@@ -5,97 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
--->
     <link rel="stylesheet" href="styles/home.css">
     <title>Save the Farm!</title>
 </head>
 
-<body>BODY
+<body>
 
     <header>
-        <p>
-            HEADER in BODY
-        </p>
         <div class="title-div">
-            DIV #1 in HEADER
+            <h2>
+                Welcome to Thillop.
+            </h2>
         </div>
-<!--
-        <div class="user-div">DIV #2 in HEADER:
-            <br>
-            USER DATA
-            <br>
-            "UserName" the "Species"
-            <br>
-            Tool: ???
-            <br>
-            Health Points: ??
-            <br>
-            Days Remaining: ??
-            <br>
-            Gems Collected: 
-            <span id="blue-gem-span">0 blue</span>, 
-            <span id="yellow-gem-span">0 yellow</span>, 
-            <span id="red-gem-span">0 red</span>
-        </div>
--->        
     </header>
 
-    <main>MAIN in BODY
-        <section>SECTION in MAIN
-            
-            <h2>
-                H2: Welcome to the GAME!!!!!
-            </h2>
-
+    <main>
+        <section class="home-section">
             <p>
-                P: The description of the game.
-                <br>
-                Collect 5 gems in the fairy lands to save the farm!
-                <br>
-                You may pick one tool to aid you during your journey. The compass will keep you from getting lost. The shield will protect you from monsters. The torch will help you find gems.
-                <br>
-                <form action="">
+               Dalria is a peaceful land, and Thillop is a quiet place. Unfortunately, a plague of bollywurgs devoured most of the crops this past summer. Farmers barely had enough food to feed their families let alone earn some coin. However, the moneylenders accept no excuse for failed payments. They have threatened to take the farms of those who do not pay. There is little hope to be found here. Still not all is lost. Not yet. There are rumors of valuable gems to be found in the fairy lands beyond the valley. However, the rumors also tell of dangers that lurk in such places. But a little danger has never stopped you, right?
+                <br><br>
+                The moneylenders are coming to collect in 5 days. 5 gems will save your farm.
+                <br><br>
+                Also, your family has one tool that can aid you on your quest. You get to pick that family tool. The compass will keep you from getting lost. The shield will help to protect you from danger. The torch will help you find gems.
+                <br><br>
+                Be sure to return within 5 days, or it will be too late. Don't die either; otherwise, all hope will be lost. Be sure to collect at least 5 gems, too, or the farm will be taken away no matter what. Finally, each quest can only be attempted once.
+                <br><br>
+                Are you ready?! If so, enter your name, select your type, and pick a tool.
+                <br><br>
+            </p>
+            <div class="form-div">
+                <form>
                     <label>
-                        Enter Your Name: <input type="text" name="user-name" />
+                        <input type="text" name="user-name" />
+                        Enter Your Name
                     </label>
                     <br>
                     <label>
-                        Select your Type:
                         <select name="species">
                             <option value="Elf">Elf</option>
                             <option value="Dwarf">Dwarf</option>
                             <option value="Halfling">Halfling</option>
                         </select>
+                        Select your Type
                     </label>
+                    <br>
                     <label>
-                        <br>
-                        Pick your Tool:
                         <select name="tool">
                             <option value="Compass">Compass</option>
                             <option value="Shield">Shield</option>
                             <option value="Torch">Torch</option>
                         </select>
+                        Pick your Tool
                     </label>
                     <br>
-                    <button>Begin Adventure</button>
-                    
-
+                    <button>Begin Your Adventure</button>
                 </form>
-                <div class="form-div">
-
-                </div>
-            </p>
+            </div>
 
         </section>
     </main>
-
-    <footer>
-        FOOTER
-    </footer>
 
     <script type="module" src="app.js"></script>
 </body>
