@@ -83,7 +83,7 @@ export const quests = [
         id: 'top',
         description: 'You climb to the top of the volcano to see if any gems have been spurt out the opening.',
         result: `
-            No luck! Dang!!
+            No luck! Dang!! No pain, though.
         `,
         hp: 0,
         days: -1,
@@ -95,7 +95,7 @@ export const quests = [
 
 {
     id: 'swamp',
-    title: 'Bogmire',
+    title: 'Bogmire Swamp',
     map: {
         top: '89%',
         left: '44%'
@@ -106,37 +106,37 @@ export const quests = [
     `,
     choices: [{
         id: 'negotiate',
-        description: 'Choice #1',
+        description: 'Swamp Choice #1',
         result: `
-            Results #1. 
+            Swamp Results #1: You got lost. 
         `,
         hp: 0,
-        days: -1,
+        days: -2,
         blue: 0,
         red: 0,
         yellow: 0
     }, {
         id: 'fight',
-        description: 'Choice #2',
+        description: 'Swamp Choice #2',
         result: `
-            Results #2.
+            Swamp Results #2: You found one gem and got hurt badly.
         `,
-        hp: 0,
+        hp: -10,
         days: -1,
         blue: 0,
         red: 0,
-        yellow: 0
+        yellow: 1
     }, {
         id: 'run',
-        description: 'Choice #3',
+        description: 'Swamp Choice #3',
         result: `
-            Results #3
+            Swamp Results #3: You found 2 gems and only got hurt a little.
         `,
-        hp: 0,
+        hp: -5,
         days: -1,
         blue: 0,
         red: 0,
-        yellow: 0
+        yellow: 2
     }]
 },
 

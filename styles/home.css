@@ -30,7 +30,7 @@ main {
 }
 
 footer {
-    background-color: aqua;   
+    background-color: aqua;
     margin: 5px;
     padding: 5px;
     border: 5px dotted black;
@@ -49,6 +49,7 @@ div {
 }
 
 .user-div {
+    background-color: lightblue;
     color: darkslategrey;
     width: 300px;
 }
@@ -61,10 +62,9 @@ section {
 }
 
 p {
-    background-color: brown;
     margin: 5px;
     padding: 5px;
-    border: 5px solid black;
+    border: 3px solid black;
 }
 
 .underline {

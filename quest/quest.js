@@ -94,6 +94,7 @@ console.log(user);
 //choice.result
 
     resultsDiv.textContent = choice.result;
+    resultsDiv.style.backgroundColor = "rgba(248, 250, 248, 0.5)";
 
     const returnButton = document.createElement('button')
 

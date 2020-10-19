@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/home.css">
-<!--
-    <link rel="stylesheet" href="map.css">
--->
+    <link rel="stylesheet" href="results.css">
     <title>Results Page</title>
 </head>
 <body>
@@ -16,13 +14,13 @@
             DIV #1 in HEADER
         </div>
         <div class="user-div">
-            <span id="user-span">"UserName" the "Species"</span>
+            <span id="user-span"></span>
             <br>
-            <span class="underline">Tool:</span> <span id="tool-span">Tool</span>
+            <span class="underline">Tool:</span> <span id="tool-span"></span>
             <br>
             <span class="underline">Health Points:</span> <span id="hp-span"></span>
             <br>
-            <span class="underline">Days Remaining:</span> <span id="days-span">5</span>
+            <span class="underline">Days Remaining:</span> <span id="days-span"></span>
             <br>
             <span class="underline">Gems Collected:</span> 
             <span id="blue-gem-span"></span>
@@ -34,7 +32,34 @@
     <main>
         MAIN
         <section>
-            THESE ARE YOUR RESULTS
+            <p>
+                <span id="gems-span"></span>
+            </p>
+            <p>
+                <span id="died-span"></span>
+            </p>
+            <p>
+                <span id="success-span"></span>
+            </p>
+            <p>
+                <span id="survival-span"></span>
+            </p>
+            <button id="play-again-button"></button>
+        </section>
+    </main>
+
+    <footer>
+        FOOTER
+    </footer>
+
+
+    <script type="module" src="results.js"></script>
+</body>
+</html>
+
+
+<!--
+                THESE ARE YOUR RESULTS
             <br><br>
             You SURVIVED or DIED
             <br><br>
@@ -66,15 +91,4 @@
                 </li>
             </ul>
 
-            <button id="play-again-button">Play Again!</button>
-        </section>
-    </main>
-
-    <footer>
-        FOOTER
-    </footer>
-
-
-    <script type="module" src="results.js"></script>
-</body>
-</html>
+-->

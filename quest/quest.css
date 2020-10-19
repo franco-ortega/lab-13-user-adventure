@@ -1,20 +1,18 @@
 section {
-    
     background-repeat: no-repeat;
     background-size: 100%;
-
-    color: gold;
+    color:brown;
     display: flex;
     flex-direction: column;
     align-items: center;
     
-    
+    position: relative;
+    z-index: 1;    
 }
 
 
-section {
-    position: relative;
-    z-index: 1;
+h2 {
+    text-align: center;
 }
 
 ul {
@@ -26,10 +24,16 @@ button {
     font-weight: bold;
 }
 
+/*
 .transparent {
-    background-color: rgb(39, 177, 39, 0.25);
+    background-color: rgba(248, 250, 248, 0.5);
     position: relative;
     z-index: 2;
+}
+*/
+
+div {
+    background-color: rgba(248, 250, 248, 0.5);
 }
 
 #choices-div {
@@ -37,6 +41,7 @@ button {
 }
 
 #results-div {
+    background-color: rgba(248, 250, 248, 0.0);
     height: 200px;
     width: 400px;
     border: none;
