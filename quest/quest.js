@@ -15,7 +15,6 @@ const id = searchParams.get('id')
 const quest = findById(quests, id)
 
 body.style.backgroundImage = `url('../assets/${quest.image}')`;
-//section.style.backgroundImage = `url('../assets/${quest.image}')`;
 
 const h2 = document.createElement('h2')
 const pTag = document.createElement('p')
@@ -60,26 +59,20 @@ form.addEventListener('submit', (e) => {
 
     const checked = document.querySelector(':checked')
     const selection = checked.value;
-console.log(selection);
 
     const choice = findById(quest.choices, selection);
 
     const user = getUser();
 
     if (user.tool === 'Compass') {
-console.log('User has the compass');
         if (choice.days < -1) {
             choice.days = choice.days + 1;
-            console.log('The compass worked!!')
         }
     } else if (user.tool === 'Shield') {
-console.log('User has the shield');
         if (choice.hp < 0) {
             choice.hp = choice.hp + 5;
-            console.log('The shield worked!!')
         }
     } else {
-console.log('User has the torch');
         if (choice.blue >= 1) {
             choice.blue = choice.blue + 1;
         } else if (choice.red >= 1) {
@@ -99,7 +92,6 @@ console.log('User has the torch');
     setUser(user);
 
     button.disabled = true;
-
 
     resultsDiv.textContent = choice.result;
     resultsDiv.style.backgroundColor = "rgba(248, 250, 248, 0.5)";

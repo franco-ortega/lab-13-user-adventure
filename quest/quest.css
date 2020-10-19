@@ -1,15 +1,12 @@
+
 section {
     background-repeat: no-repeat;
     background-size: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
     position: relative;
     z-index: 1;
     color: purple;
     font-weight: bold;
 }
-
 
 h2 {
     text-align: center;
@@ -31,6 +28,7 @@ div {
 
 button {
     margin: 5px;
+    margin-top: 20px;
 }
 
 #choices-div {
@@ -42,9 +40,9 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 175px;
+    height: auto;
     width: 220px;
-    margin: 10px;
+    margin: 25px;
     padding: 5px;
     border: none;
 }

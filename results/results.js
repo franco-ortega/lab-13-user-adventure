@@ -10,7 +10,6 @@ renderUserData();
 const user = getUser();
 
 const gemTotal = user.blue + user.red + user.yellow;
-    console.log(gemTotal + ' gems');
 
 let survived
 let success
