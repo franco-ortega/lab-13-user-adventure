@@ -1,37 +1,33 @@
 import { quests } from '../quest/data.js';
-import { findById, getUser, setUser } from '../utils.js';
+import { findById, getUser, setUser, renderUserData } from '../utils.js';
 
-//const body = document.querySelector('body');
-//const main = document.querySelector('main');
+renderUserData();
 
+const body = document.querySelector('body');
 const section = document.querySelector('section');
+const choicesDiv = document.querySelector('#choices-div')
+const resultsDiv = document.querySelector('#results-div');
 
 const searchParams = new URLSearchParams(window.location.search);
-console.log(searchParams.get('id'));
 
 const id = searchParams.get('id')
 
 const quest = findById(quests, id)
-console.log(quest);
 
-section.style.backgroundImage = `url('../assets/${quest.image}')`;
-console.log(quest.image);
+body.style.backgroundImage = `url('../assets/${quest.image}')`;
 
 const h2 = document.createElement('h2')
 const pTag = document.createElement('p')
 
-
 h2.textContent = quest.title;
 pTag.textContent = quest.description;
+pTag.classList.add("transparent");
 
-section.append(h2, pTag);
-
-console.log(quest.choices);
+choicesDiv.append(h2, pTag);
 
 const form = document.createElement('form');
 
-section.appendChild(form);
-
+choicesDiv.appendChild(form);
 
 quest.choices.forEach(choice => {
     const ul =document.createElement('ul');
@@ -55,25 +51,37 @@ quest.choices.forEach(choice => {
     form.appendChild(ul);
 });
 
-
 const button = document.createElement('button');
-
 button.textContent = 'Make Your Choice';
-
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-console.log('form submitted');
-
     const checked = document.querySelector(':checked')
     const selection = checked.value;
-console.log(selection);
 
     const choice = findById(quest.choices, selection);
 
     const user = getUser();
-    
+
+    if (user.tool === 'Compass') {
+        if (choice.days < -1) {
+            choice.days = choice.days + 1;
+        }
+    } else if (user.tool === 'Shield') {
+        if (choice.hp < 0) {
+            choice.hp = choice.hp + 5;
+        }
+    } else {
+        if (choice.blue >= 1) {
+            choice.blue = choice.blue + 1;
+        } else if (choice.red >= 1) {
+            choice.red = choice.red + 1;
+        } else if (choice.yellow >= 1) {
+            choice.yellow = choice.yellow + 1;
+        }
+    }
+
     user.hp += choice.hp;
     user.days += choice.days;
     user.blue += choice.blue;
@@ -81,11 +89,23 @@ console.log(selection);
     user.yellow += choice.yellow;
     user.completed[quest.id] = true;
 
-console.log(user);
-
     setUser(user);
 
-    window.location.href = '../map';
+    button.disabled = true;
+
+    resultsDiv.textContent = choice.result;
+    resultsDiv.style.backgroundColor = "rgba(248, 250, 248, 0.5)";
+
+    const returnButton = document.createElement('button')
+
+    returnButton.textContent = 'Return to Map'
+
+    returnButton.addEventListener('click', () => {
+        window.location.href = '../map';
+    })
+
+    resultsDiv.append(returnButton);
+
 });
 
 form.appendChild(button);

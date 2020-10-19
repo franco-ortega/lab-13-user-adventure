@@ -8,45 +8,34 @@
     <title>Quest Page</title>
 </head>
 <body>
-    QUEST
-    <header>HEADER in BODY
-        <div class="title-div">
-            DIV #1 in HEADER
-        </div>
-        <div class="user-div">DIV #2 in HEADER:
+    <header>
+        <div class="user-div">
+            <span id="user-span">"UserName" the "Species"</span>
             <br>
-            USER DATA
+            <span class="underline">Tool:</span> <span id="tool-span">Tool</span>
             <br>
-            "UserName" the "Species"
+            <span class="underline">Health Points:</span> <span id="hp-span"></span>
             <br>
-            Tool: ???
+            <span class="underline">Days Remaining:</span> <span id="days-span">5</span>
             <br>
-            Health Points: ??
-            <br>
-            Days Remaining: ??
-            <br>
-            Gems Collected: 
-            <span class="blue-gem-span">0 blue</span>,  
-            <span class="red-gem-span">0 red</span>, 
-            <span class="yellow-gem-span">0 yellow</span>
+            <span class="underline">Gems Collected:</span> 
+            <span id="blue-gem-span"></span>
+            <span id="red-gem-span"></span>
+            <span id="yellow-gem-span"></span>
         </div>
     </header>
-
     <main>
-        MAIN
         <section style="background-image: url('');">
-            SECTION in MAIN
-            <ul class="choices-list">
+            <div class="transparent" id="choices-div">
+                <ul class="choices-list">
 
-            </ul>
+                </ul>
+            </div>
+            <div class="transparent" id="results-div">
+                <span id="results-span"></span>
+            </div> 
         </section>
     </main>
-
-    <footer>
-        FOOTER
-    </footer>
-
-
     <script type="module" src="quest.js"></script>
 </body>
 </html>

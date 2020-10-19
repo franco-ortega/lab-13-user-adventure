@@ -1,23 +1,48 @@
+
 section {
-    
     background-repeat: no-repeat;
     background-size: 100%;
-
-    color: gold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
+    position: relative;
+    z-index: 1;
+    color: purple;
+    font-weight: bold;
 }
 
-
+h2 {
+    text-align: center;
+}
 
 ul {
     width: 200;
+    font-weight: bold;
 }
 
 button {
     width: 200px;
     font-weight: bold;
+}
+
+div {
+    background-color: rgba(248, 250, 248, 0.5);
+}
+
+button {
+    margin: 5px;
+    margin-top: 20px;
+}
+
+#choices-div {
+    border: grey solid;
+}
+
+#results-div {
+    background-color: rgba(248, 250, 248, 0.0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 220px;
+    margin: 25px;
+    padding: 5px;
+    border: none;
 }
