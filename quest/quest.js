@@ -98,6 +98,9 @@ console.log('User has the torch');
 
     setUser(user);
 
+    button.disabled = true;
+
+
     resultsDiv.textContent = choice.result;
     resultsDiv.style.backgroundColor = "rgba(248, 250, 248, 0.5)";
 
