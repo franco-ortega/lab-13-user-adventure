@@ -23,7 +23,7 @@ renderUserData();
 const section = document.querySelector('section');
 const ul = document.querySelector('ul');
 
-section.style.backgroundImage = `url('../assets/map.jpg')`;
+section.style.backgroundImage = `url('./assets/map.jpg')`;
 
 quests.forEach((quest) => {
 
