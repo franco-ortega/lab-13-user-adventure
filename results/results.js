@@ -6,7 +6,7 @@ const successSpan = document.getElementById('success-span');
 const survivalSpan = document.getElementById('survival-span');
 const body = document.querySelector('body')
 
-body.style.backgroundImage = `url('./assets/farm.jpg')`;
+body.style.backgroundImage = `url('../assets/farm.jpg')`;
 
 renderUserData();
 

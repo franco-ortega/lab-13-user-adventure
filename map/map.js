@@ -3,7 +3,7 @@ import { getUser, renderUserData } from '../utils.js';
 
 const body = document.querySelector('body')
 
-body.style.backgroundImage = `url('./assets/wilderness.jpg')`;
+body.style.backgroundImage = `url('../assets/wilderness.jpg')`;
 
 const user = getUser();
 
