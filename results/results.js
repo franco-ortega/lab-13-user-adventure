@@ -19,8 +19,10 @@ let success
 
 if (user.hp <= 0) {;
     survived = `Tragically, ${user.name} died in the fairy lands and never returned to the farm.`;
-} else if  (user.hp === 20) {
-    survived = `${user.name} made it through the fairy lands without a scratch!!`;
+} else if  (user.hp === 30) {
+    survived = `${user.name} made it through the fairy lands with barely a scratch!!`;
+} else if  (user.hp >= 20) {
+    survived = `${user.name} made it out with a few scars.`;
 } else if  (user.hp >= 10) {
     survived = `${user.name} got pretty banged up but will recover.`;
 } else {
@@ -37,7 +39,7 @@ if (gemTotal < 5 || user.hp <= 0 || user.days <= 0) {
     success = `The farm was saved. Unfortunately, other families lost their farms to the moneylenders.`;
 }
 
-totalDaysSpan.textContent = -(user.days - 5) + " days have passed.";
+totalDaysSpan.textContent = -(user.days - 14) + " days have passed.";
 gemsSpan.textContent = `${user.name} found ${gemTotal} gems.`;
 survivalSpan.textContent = survived;
 successSpan.textContent = success;

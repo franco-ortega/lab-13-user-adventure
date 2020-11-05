@@ -6,6 +6,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: auto;
+    width: 900px;
+    height: 800px;
     padding: 5px;
 }
 

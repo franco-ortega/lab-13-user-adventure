@@ -1,7 +1,10 @@
+body {
+    background-color: black;
+}
 
 section {
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     position: relative;
     z-index: 1;
     color: purple;

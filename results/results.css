@@ -1,3 +1,10 @@
+body {
+    background-color: orange;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
 section {
     background-color: rgb(255, 165, 0, 0.75);
     display: flex;
