@@ -3,7 +3,7 @@ import { setUser } from './utils.js';
 const body = document.querySelector('body')
 const form = document.querySelector('form');
 
-body.style.backgroundImage = `url('../assets/farm.jpg')`;
+body.style.backgroundImage = `url('./assets/farm.jpg')`;
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
