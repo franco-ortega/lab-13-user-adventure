@@ -64,6 +64,27 @@ form.addEventListener('submit', (e) => {
 
     const user = getUser();
 
+    if (user.species === 'Elf') {
+        if (choice.days <= -1) {
+            choice.days = choice.days + 1;
+        }
+    } else if (user.species === 'Dwarf') {
+        choice.days = choice.days -1;
+        if (choice.hp < 0) {
+            choice.hp = choice.hp + 5;
+        }
+        
+    } else {
+        if (choice.blue >= 1) {
+            choice.blue = choice.blue + 1;
+        } else if (choice.red >= 1) {
+            choice.red = choice.red + 1;
+        } else if (choice.yellow >= 1) {
+            choice.yellow = choice.yellow + 1;
+        }
+    }
+
+
     if (user.tool === 'Compass') {
         if (choice.days < -1) {
             choice.days = choice.days + 1;
@@ -81,6 +102,8 @@ form.addEventListener('submit', (e) => {
             choice.yellow = choice.yellow + 1;
         }
     }
+
+
 
     user.hp += choice.hp;
     user.days += choice.days;
