@@ -29,7 +29,7 @@ if (user.hp <= 0) {;
     survived = `${user.name} barely survived...and some scars never heal.`;
 }
 
-if (gemTotal < 5 || user.hp <= 0 || user.days <= 0) {
+if (gemTotal < 5 || user.hp <= 0 || user.days < 0) {
     success = `The farm was lost.`;
 } else if  (gemTotal >= 9) {
     success = `The farm has been saved! ${user.name} found enough gems to save other farms too!! And there was enough leftover for ${user.name} to live comfortably for the rest of their life.`;
@@ -39,7 +39,7 @@ if (gemTotal < 5 || user.hp <= 0 || user.days <= 0) {
     success = `The farm was saved. Unfortunately, other families lost their farms to the moneylenders.`;
 }
 
-totalDaysSpan.textContent = -(user.days - 14) + " days have passed.";
+totalDaysSpan.textContent = `You used ${user.days} out of 14 days.`;
 gemsSpan.textContent = `${user.name} found ${gemTotal} gems.`;
 survivalSpan.textContent = survived;
 successSpan.textContent = success;
